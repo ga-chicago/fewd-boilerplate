@@ -1,1 +1,98 @@
 /* css yay! */
+
+/*
+	Style Guide in CSS
+	text color: black;
+	background: lavendar;
+	subtext: navy;
+	subbackground: white;
+
+	base font size: 16px;
+	all fonts: 1rem;
+	subtext: 0.75rem;
+
+	base phone sizes
+	small phone: 320px;
+	normal phone: 420px;
+	larger phone: 480px;
+	phablet: 512px;
+	tablet: 610px;
+	tablet larger: 768px;
+	desktop: 960px;
+	widescreen: 1080px;
+	4k: 4000px;
+*/
+
+body {
+	font-size: 16px;
+	background: lavender;
+}
+
+#wrapper {
+	width: 320px; /* mobile first, lowest common denominator */
+	border-radius: 25px;
+	margin: auto;
+	background: white;
+	padding: 1rem;
+	font-size: 1rem;
+}
+
+#phone {
+	background: magenta;
+	display: none;
+}
+
+#larger-phone {
+	background: lime;
+	display: none;
+}
+
+#tablet {
+	background: blue;
+	display: none;
+}
+
+#desktop {
+	background: purple;
+	display: none;
+	color: yellow;
+}
+
+#larger-desktop {
+	background: orange;
+	display: none;
+}
+
+/*
+	Media Queries
+*/
+@media (min-width: 320px) {
+	#phone {
+		display: block;
+	}
+}
+
+@media (min-width: 420px) {
+	#larger-phone {
+		display: block;
+	}
+	#phone {
+		display: none;
+	}
+}
+
+@media (min-width: 610px) {
+	#tablet {
+		display: block;
+	}
+	#larger-phone {
+		display: none;
+	}
+	#phone {
+		display: none;
+	}
+}
+
+
+
+
